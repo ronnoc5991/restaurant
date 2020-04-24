@@ -137,9 +137,11 @@ var homeLink = document.getElementById("nameDiv").addEventListener("click", func
 
 
 function clearContent() {
-    lowerDiv.removeChild(lowerDiv.childNodes[0]);
-    //var lowerDisplay = content.getElementById("lowerDisplay");
-    //lowerDisplay.remove();
+    var children = lowerDiv.childNodes
+    console.log(children.length);
+    for (let i = 0; i<children.length; i++){
+        lowerDiv.removeChild((lowerDiv.childNodes[0]));
+    }
 }
 
 function loadHome() {
