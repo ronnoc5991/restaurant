@@ -39,13 +39,14 @@ const lowerItem3 = () => {
         flipBoxInner.appendChild(flipBoxBack);
 
         const backContent = document.createElement('div');
+        backContent.className = "info"
         backContent.style.margin = "auto";
         backContent.style.color = "#38220f";
         backContent.style.fontSize = "20px";
         backContent.style.paddingLeft = "50";
         backContent.style.paddingRight = "50";
         backContent.style.fontFamily = "Arial";
-        backContent.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultricies integer quis auctor elit sed vulputate mi. Quis eleifend quam adipiscing vitae proin.";
+        backContent.innerHTML = "<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultricies integer quis auctor elit sed vulputate mi.<br><br><br>";
         flipBoxBack.appendChild(backContent);
     
     

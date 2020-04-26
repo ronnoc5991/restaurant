@@ -20,7 +20,7 @@ const topWrapper = document.createElement('div');
     topWrapper.style.gridRowEnd = "2";
     topWrapper.style.display = "flex";
     topWrapper.style.width = "100%";
-    containerDiv.appendChild(topWrapper);//x
+    containerDiv.appendChild(topWrapper);
 
 const topDiv = document.createElement('div');
     topDiv.id = "topDiv";
@@ -29,15 +29,15 @@ const topDiv = document.createElement('div');
     topDiv.style.alignItems = "center";
     topDiv.style.flexBasis = "60%";
     topDiv.style.height = "cover";
-    topDiv.style.margin = "auto";
-    topWrapper.appendChild(topDiv);//x
+    topDiv.style.margin = "10 auto";
+    topWrapper.appendChild(topDiv);
 
 const link1 = document.createElement('div');
     link1.id = "link1";
     link1.style.display = "flex";
     link1.style.flexBasis = "10%";
     link1.style.height = "50px";
-    topDiv.appendChild(link1);//x
+    topDiv.appendChild(link1);
 
     const linkInner1 = document.createElement('div');
         linkInner1.innerHTML = "MENU";
@@ -47,29 +47,31 @@ const link1 = document.createElement('div');
 
 const nameDiv = document.createElement('div');
     nameDiv.id = "nameDiv";
-    nameDiv.className = "title clickable"
-    nameDiv.style.height = "110px";
-    nameDiv.style.width = "270px";
+    nameDiv.className = "title clickable";
+    nameDiv.style.height = "160px";
+    nameDiv.style.width = "160px";
     nameDiv.style.display = "flex";
     nameDiv.style.border = "10px solid white";
-    topDiv.appendChild(nameDiv);//x
+    nameDiv.style.alignItems = "center";
+    nameDiv.style.justifyContent = "center";
+    nameDiv.style.borderRadius = "50%";
+    topDiv.appendChild(nameDiv);
 
-const nameText = document.createElement('div');
-    nameText.style.margin = "auto";
-    nameText.className = "title clickable";
-    nameText.innerHTML = "El Cafe";
-    nameText.style.fontSize = "40px";
-    nameText.style.color = "white";
-    nameText.style.fontWeight = "bold";
-    nameText.style.fontFamily = "Arial";
-    nameDiv.appendChild(nameText);//x
+const nameTitle = document.createElement('div');
+    nameTitle.style.margin = "auto";
+    nameTitle.style.fontFamily = "Arial";
+    nameTitle.style.fontWeight = "bold";
+    nameTitle.style.fontSize = "40px";
+    nameTitle.innerHTML = "Cafe";
+    nameTitle.style.color = "white";
+    nameDiv.appendChild(nameTitle);
 
 const link2 = document.createElement('div');
     link2.id = "link2";
     link2.style.display = "flex";
     link2.style.flexBasis = "10%";
     link2.style.height = "50px";
-    topDiv.appendChild(link2);//x
+    topDiv.appendChild(link2);
 
     const linkInner2 = document.createElement('div');
         linkInner2.innerHTML = "CONTACT";
@@ -81,7 +83,7 @@ const lowerDiv = document.createElement('div');
     lowerDiv.style.display = "flex";
     lowerDiv.style.gridRowStart = "2";
     lowerDiv.style.gridRowEnd = "3";
-    containerDiv.appendChild(lowerDiv);//x
+    containerDiv.appendChild(lowerDiv);
 
 
 
@@ -103,13 +105,12 @@ for (let i=0; i<titleLinks.length; i++) {
     titleLinks[i].addEventListener("mouseout", removeTitleEffects);
 }
 function addTitleEffects() {
-    nameText.style.color = "#ece0d1";
-    this.style.borderColor = "#ece0d1";
+    this.style.transition = "border-radius 1s";
+    this.style.borderRadius = "0%";
     this.style.cursor = "pointer";
 }
 function removeTitleEffects() {
-    nameText.style.color = "white";
-    this.style.borderColor = "white";
+    this.style.borderRadius = "50%";
     this.style.cursor = "auto";
 }
 function addHoverEffects() {

@@ -29,6 +29,7 @@ const lowerItem = document.createElement('div');
     flipBoxInner.appendChild(flipBoxFront);
 
     const flipBoxBack = document.createElement('div')
+    //flipBoxBack.className = "box";
     flipBoxBack.style.display = "flex";
     flipBoxBack.style.position = "absolute";
     flipBoxBack.style.width = "100%";
@@ -38,14 +39,15 @@ const lowerItem = document.createElement('div');
     flipBoxBack.style.transform = "rotateY(180deg)";
     flipBoxInner.appendChild(flipBoxBack);
 
-    const backContent = document.createElement('div');
+    const backContent = document.createElement('p');
+    backContent.className = "info"
     backContent.style.margin = "auto";
-    backContent.style.color = "#38220f";
+    backContent.style.color = "38220f";
     backContent.style.fontSize = "20px";
     backContent.style.fontFamily = "Arial";
     backContent.style.paddingLeft = "50";
     backContent.style.paddingRight = "50";
-    backContent.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultricies integer quis auctor elit sed vulputate mi. Quis eleifend quam adipiscing vitae proin.";
+    backContent.innerHTML = "<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultricies integer quis auctor elit sed vulputate mi.<br><br><br>";
     flipBoxBack.appendChild(backContent);
 
 
