@@ -3,6 +3,10 @@
         <title>Restaurant</title>
     </head>
     <style>
+        :root {
+            --start-link-color: #dbc1ac;
+            --hover-link-color: #ece0d1;
+        }
         html {
             background-color: white;
             background-size: cover;
@@ -16,6 +20,10 @@
 
         #content{
             height: 100%;
+        }
+
+        .flip-box:hover .flip-box-inner {
+            transform: rotateY(180deg);
         }
 
 

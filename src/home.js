@@ -17,7 +17,6 @@ const home = () => {
     lowerItem1.style.backgroundImage = "url(../photos/breakfast.jpg)"
     lowerItem1.style.backgroundSize = "cover";
     lowerItem1.style.margin = "auto";
-    lowerItem1.style.filter = "grayscale(30%) blur(1px)";
 
     const lowerItem2 = document.createElement('div');
     lowerItem2.className = "lowerImage clickable";
@@ -26,7 +25,6 @@ const home = () => {
     lowerItem2.style.backgroundImage = "url(../photos/pour.jpg)"
     lowerItem2.style.backgroundSize = "cover";
     lowerItem2.style.margin = "auto";
-    lowerItem2.style.filter = "grayscale(30%) blur(1px)";
 
     const lowerItem3 = document.createElement('div');
     lowerItem3.className = "lowerImage clickable";
@@ -35,7 +33,6 @@ const home = () => {
     lowerItem3.style.backgroundImage = "url(../photos/cake.jpg)"
     lowerItem3.style.backgroundSize = "cover";
     lowerItem3.style.margin = "auto";
-    lowerItem3.style.filter = "grayscale(30%) blur(1px)";
 
     lowerDisplay.appendChild(lowerItem1);
     lowerDisplay.appendChild(lowerItem2);
@@ -48,13 +45,11 @@ const home = () => {
     }
 
     function lowerHoverOn() {
-        this.style.filter = "grayscale(0%)";
         this.style.transform = "scale(1.01)";
         this.style.cursor = "pointer";
     }
 
     function lowerHoverOff() {
-        this.style.filter = "grayscale(30%) blur(1px)";
         this.style.transform = "scale(1)";
         this.style.cursor = "auto";
     }

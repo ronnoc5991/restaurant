@@ -89,7 +89,7 @@ const lowerDiv = document.createElement('div');
     var linksClass = topDiv.querySelectorAll('.link');
 for (let i=0; i<linksClass.length; i++) {
     linksClass[i].style.margin = "auto";
-    linksClass[i].style.color = "#dbc1ac";
+    linksClass[i].style.color = "var(--start-link-color)";
     linksClass[i].style.fontSize = "25px";
     linksClass[i].style.fontFamily = "Arial";
     linksClass[i].style.fontWeight = "bold";
@@ -114,7 +114,7 @@ function removeTitleEffects() {
 }
 function addHoverEffects() {
     this.style.transform = "scale(1.01)";
-    this.style.color = "#ece0d1";
+    this.style.color = "var(--hover-link-color)";
     this.style.cursor = "pointer";
 }
 function removeHoverEffects() {
@@ -138,7 +138,6 @@ var homeLink = document.getElementById("nameDiv").addEventListener("click", func
 
 function clearContent() {
     var children = lowerDiv.childNodes
-    console.log(children.length);
     for (let i = 0; i<children.length; i++){
         lowerDiv.removeChild((lowerDiv.childNodes[0]));
     }
