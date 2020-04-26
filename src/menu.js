@@ -2,55 +2,21 @@ const menu = () => {
 
     const lowerDisplay = document.createElement('div');
     lowerDisplay.id = "lowerDisplay";
+    lowerDisplay.className = "box";
     lowerDisplay.style.display = "flex";
     lowerDisplay.style.flexWrap = "wrap";
-    lowerDisplay.style.width = "1000px";
+    lowerDisplay.style.width = "500px";
     lowerDisplay.style.height = "500px";
     lowerDisplay.style.margin = "auto";
 
-    const lowerItem1 = document.createElement('div');
-    lowerItem1.className = "box";
-
-
-    // const flipBox = document.createElement('div');
-    // lowerDisplay.appendChild(flipBox);
-    // flipBox.className = "flip-box";
-    // flipBox.style.margin = "auto";
-    // flipBox.style.flexBasis = "400px";
-    // flipBox.style.height = "300px";
-    // flipBox.style.perspective = "500px";
-    // flipBox.style.backgroundColor = "transparent";
-
-    // const flipBoxInner = document.createElement('div');
-    // flipBox.appendChild(flipBoxInner);
-    // flipBoxInner.className = "flip-box-inner";
-    // flipBoxInner.style.position = "relative";
-    // flipBoxInner.style.width = "100%";
-    // flipBoxInner.style.height = "100%";
-    // flipBoxInner.style.textAlign = "center";
-    // flipBoxInner.style.transition = "transform 0.8s";
-    // flipBoxInner.style.transformStyle = "preserve-3d";
-
-    // const flipBoxFront = document.createElement('div');
-    // //flipBoxFront.innerHTML = "Front Side Yo";
-    // flipBoxFront.style.position = "absolute";
-    // flipBoxFront.style.width = "100%";
-    // flipBoxFront.style.height = "100%";
-    // flipBoxFront.style.backfaceVisibility = "hidden";
-    // flipBoxFront.style.backgroundColor = "black";
-    // flipBoxInner.appendChild(flipBoxFront);
-
-    // const flipBoxBack = document.createElement('div')
-    // //flipBoxBack.innerHTML = "Back Side Yo";
-    // flipBoxBack.style.position = "absolute";
-    // flipBoxBack.style.width = "100%";
-    // flipBoxBack.style.height = "100%";
-    // flipBoxBack.style.backfaceVisibility = "hidden";
-    // flipBoxBack.style.backgroundColor = "white";
-    // flipBoxBack.style.transform = "rotateY(180deg)";
-    // flipBoxInner.appendChild(flipBoxBack);
-
-    lowerDisplay.appendChild(lowerItem1);
+    const menuContent = document.createElement('div');
+    menuContent.style.textAlign = "center";
+    menuContent.style.justifyContent = "center";
+    menuContent.style.margin = "auto";
+    menuContent.innerHTML = "Lorem ipsum dolor sit amet.<br><br><br>Consectetur adipiscing elit, sed do eiusmod tempor incididunt.<br><br><br>Ut labore et dolore magna aliqua.<br><br><br>Nec tincidunt praesent semper feugiat nibh sed pulvinar proin.<br>";
+    menuContent.style.color = "var(--start-link-color)";
+    menuContent.style.fontSize = "18px";
+    lowerDisplay.appendChild(menuContent);
 
     return lowerDisplay;
 }
